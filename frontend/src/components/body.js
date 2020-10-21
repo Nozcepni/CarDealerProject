@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class body extends Component {
     render() {
         return (
-            <div>
+            <div style={{ marginTop: "50px" }}>
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                     <div class="container">
                         <a class="navbar-brand" href="#">Start Bootstrap</a>
