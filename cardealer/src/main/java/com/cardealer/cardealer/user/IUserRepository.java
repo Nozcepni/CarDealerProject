@@ -1,5 +1,7 @@
 package com.cardealer.cardealer.user;
 
-public class IUserRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface IUserRepository extends JpaRepository<User, Long> {
 
 }
