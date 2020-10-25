@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Input from '../components/Input'
 import axios from 'axios';
+import {signup} from '../api/apiCalls'
 
 
 const SignupPage = () => {
@@ -12,6 +13,7 @@ const SignupPage = () => {
 
     const onClicked = () =>{
 
+
         const body={
             name,
             lastname,
@@ -19,7 +21,7 @@ const SignupPage = () => {
             password
         }
 
-        axios.post("/api/1.0/users/", body)
+        signup(body);
 
     }
 

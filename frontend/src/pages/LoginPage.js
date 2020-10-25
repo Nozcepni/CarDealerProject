@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import axios from 'axios';
-import Input from '../components/Input'
+import Input from '../components/Input';
+import {login} from '../api/apiCalls'
 
 const LoginPage = () => {
 
@@ -9,19 +9,13 @@ const LoginPage = () => {
 
     const onClicked = () => {
 
-        const body = {
+        const creds = {
             email,
             password
         }
 
-        if (email.indexOf('@') == -1) {
-
-            return null
-        }
-
-        axios.post("/api/1.0/users/", body)
-
-        console.log(body)
+      
+        login(creds);
 
     }
 
