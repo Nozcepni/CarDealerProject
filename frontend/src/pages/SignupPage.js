@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Input from '../components/Input'
-import axios from 'axios';
 import {signup} from '../api/apiCalls'
 
 
@@ -8,16 +7,17 @@ const SignupPage = () => {
 
     const [name, setName] = useState("");
     const [lastname, setLastname] = useState("");
-    const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
     const onClicked = () =>{
 
+       // event.preventDefault();
 
         const body={
             name,
             lastname,
-            email,
+            username,
             password
         }
 
@@ -50,8 +50,8 @@ const SignupPage = () => {
                     </div>
                     <div className="form-group">
 
-                        <Input type="email" label="E-mail" error="" className="form-control" name="email" onChange={(event) => {
-                            setEmail(event.target.value)
+                        <Input type="input" label="Username" error="" className="form-control" name="username" onChange={(event) => {
+                            setUsername(event.target.value)
                         }} />
 
                     </div>
@@ -64,7 +64,7 @@ const SignupPage = () => {
                     </div>
 
                     <div classNameName="text-center">
-                        <button type="submit" className="btn btn-primary" onClick={() => {
+                        <button type="submit" className="btn btn-primary" onClick={(event) => {
                             onClicked()
                         }} >Tikla</button>
                     </div>

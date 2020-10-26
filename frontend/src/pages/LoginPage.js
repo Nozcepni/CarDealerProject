@@ -28,7 +28,7 @@ const LoginPage = () => {
 
             <form style={{ marginTop: "150px" }}>
                 <div className="form-group">
-                    <Input type="email" label="E-mail" error="" className="form-control" name="email" onChange={(event) => {
+                    <Input type="input" label="Username" error="" className="form-control" name="username" onChange={(event) => {
                         setEmail(event.target.value)
                     }} />
                 </div>
